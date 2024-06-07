@@ -65,6 +65,8 @@ elseif platform.match('ath79', 'generic', {
 	lan_ifname, wan_ifname = 'eth0.2', 'eth0.1'
 elseif platform.match('ramips', 'mt7621', {
 	'netgear,wac104',
+}) or platform.match('lantiq', 'xrx200', {
+	'avm,fritz7430',
 }) then
 	lan_ifname, wan_ifname = 'lan2 lan3 lan4', 'lan1'
 elseif platform.match('ramips', 'mt7621', {
